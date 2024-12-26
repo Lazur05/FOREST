@@ -1,0 +1,460 @@
+@use '../variables/variables' as *;
+
+
+
+@media screen and (max-width: 1440px) {
+    .wrapper {
+        max-width: 1100px;
+    }
+    .aboutus {
+        &__img {
+            width: 40%;
+        }
+        &__desc {
+            margin-left: 2em;
+        }
+        &__title {
+            font-size: 1.5em;
+        }
+        &__text {
+            font-size: 1em;
+        }
+    }
+    .offers {
+        &__card {
+            width: 35%;
+            margin: 1em;
+        }
+        &__btn {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        max-width: 860px;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .aboutus {
+        &__img {
+            width: 40%;
+        }
+        &__desc {
+            margin-left: 2em;
+        }
+        &__title {
+            font-size: 1em;
+        }
+        &__text {
+            font-size: .8em;
+        }
+    }
+    .hero-section {
+        height: 30vh;
+        &__box {
+            padding: 1em 8em;
+        }
+        &__title {
+            font-size: 1.8em;
+        }
+    }
+    .offers {
+        &__card {
+            width: 45%;
+        }
+        &__btn {
+            width: 100%;
+        }
+    }
+
+    .contact {
+        &__popup {
+            width: 50%;
+            &--show {
+                top: 15%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        max-width: 670px;
+    }
+    .hero-img {
+        background-image: url('../img/jungle_mobile.jpg');
+    }
+    .nav {
+        &__desktop {
+            display: none;
+        }
+        &__mobile {
+            display: block;
+        }
+        .logo {
+            margin-left: 1em;
+        }
+
+        &__burger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+            cursor: pointer;
+            z-index: 2000;
+            &-bar {
+                border-radius: 8px;
+                width: 2em;
+                height: 0.3em;
+                background-color: $main-color;
+                margin: 0.2em;
+                transition: all 0.6s;
+                &--active {
+                    background-color: $white;
+                }
+                &--active:nth-of-type(1) {
+                    transform: rotate(45deg) translate(6px, 5.5px);
+                }
+                    
+                &--active:nth-of-type(2) {
+                    opacity: 0;
+                }
+                    
+                &--active:nth-of-type(3) {
+                    transform: rotate(-45deg) translate(9.5px, -11px);
+                }
+            }
+        }
+
+        &__links {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: $main-color;
+            z-index: 1000;
+            transition: transform 0.5s;
+            &--active {
+                transform: translateX(100%);
+            }
+        }
+        &__link {
+            color: $white;
+            padding: 1em;
+            font-size: 2.5rem;
+            &:focus {
+                color: white;
+        
+                &:before {
+                    transform: translateY(0);
+                }
+            }
+    
+            &--active {
+                color: white;
+                &:before {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    .home {
+        &__title {
+            font-size: 1.3em;
+        }
+        &__text {
+            font-size: 2.3rem;
+        }
+        
+    }
+    .aboutus {
+        &__body {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__desc {
+            margin: 2em 0;
+            text-align: center;
+        }
+        &__title {
+            font-size: 1.8em;
+        }
+        &__text {
+            font-size: 1.2em;
+            line-height: 1.8em;
+        }
+    }
+    .offers {
+        &__card {
+            width: 55%;
+            &-btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        scroll-padding-top: 59px;
+    }
+    .wrapper {
+        max-width: 700px;
+    }
+    .nav {
+        .logo {
+            margin-left: 0.5em;
+        }
+        &__burger {
+            padding: 1em;
+        }
+        &__link {
+            padding: 0.5em;
+            font-size: 2rem;
+        }
+    }
+    .home {
+        &__body {
+            text-align: center;
+        }
+        &__title {
+            font-size: 1.8em;
+        }
+        &__text {
+            font-size: 2rem;
+        }
+    }
+    .aboutus {
+        &__img {
+            width: 90%;
+            margin: 0 auto;
+        }
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__text {
+            font-size: 1rem;
+            line-height: 2em;
+        }
+    }
+
+    .hero-section {
+        &__title {
+            font-size: 1.5em;
+        }
+    }
+
+    .footer {
+        .logo {
+            justify-content: center;
+            padding: 2em 0;
+            &__title{
+                font-size: 2.7em;
+            }
+            img {
+                width: 4em;
+            }
+        }
+        &__content {
+            flex-direction: column;
+        }
+    }
+
+    .contact{
+        &__form {
+            width: 90%;
+            padding: 4em;
+            &-inputs-group {
+                flex-direction: column;
+            }
+            &-group {
+                width: 100%;
+                margin-bottom: 1em;
+            }
+            &-textarea-label {
+                left: 3%;
+            }
+        }
+
+        &__popup {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        max-width: 400px;
+    }
+    .nav {
+        padding: 0.3em;
+        .logo {
+            margin-left: 0.3em;
+        }
+        &__burger {
+            padding: 0.5em;
+        }
+        &__links {
+            &__link {
+                padding: 0.3em;
+                font-size: 1.1em;
+            }
+        }
+    }
+    .home {
+        &__title {
+            font-size: 1.4em;
+        }
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+    .aboutus {
+        &__title {
+            font-size: 1.4em;
+        }
+        &__text {
+            font-size: 1em;
+            line-height: 1.8em;
+        }
+    }
+    .hero-section {
+        height: 25vh;
+        &__box {
+            padding: .8em 3em;
+            border: 1px solid $white;
+        }
+        &__title {
+            font-size: 1.2em;
+        }
+    }
+    .offers {
+        &__card {
+            width: 80%;
+            margin: 1em 0;
+            padding: 2em;
+            &-title {
+                font-size: 1.6em;
+            }
+            &-price {
+                font-size: 2.4em;
+            }
+            &-item {
+                font-size: .9em;
+            }
+        }
+        &__card:nth-of-type(4) {
+            padding: 1.5em;
+            .offers__card-title{
+                font-size: 2.3rem;
+            }
+            .offers__card-price {
+                font-size: 3rem;
+            }
+            .offers__card-desc {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .footer {
+        &__links {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            padding-bottom: 2em;
+        }
+        &__list {
+            margin: 0 1em;
+            &-title {
+                font-size: 1.2em;
+            }
+            &-item {
+                text-align: center;
+                font-size: 1em;
+            }
+        }
+    }
+    .contact {
+        &__form {
+            padding: 2em;
+        }
+        &__info {
+            flex-direction: column;
+            margin-bottom: 1em;
+            &-item {
+                margin: 1em 0;
+            }
+        }
+        &__popup {
+            width: 80%;
+        }
+        &__map {
+            margin: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    html {
+        scroll-padding-top: 58px;
+    }
+    .wrapper {
+        max-width: 300px;
+    }
+    .nav {
+        &__burger {
+            padding: 0.3em;
+        }
+        &__links {
+            &__link {
+                padding: 0.2em;
+                font-size: 1em;
+            }
+        }
+    }
+    .hero-section {
+        height: 20vh;
+        &__box {
+            padding: .8em 3em;
+            border: 1px solid $white;
+        }
+        &__title {
+            font-size: .9em;
+        }
+    }
+    .offers {
+        &__card {
+            width: 80%;
+            margin: 1em 0;
+            padding: 1em;
+            &-title {
+                font-size: 1.6em;
+            }
+            &-price {
+                font-size: 2.4em;
+            }
+            &-item {
+                font-size: .8em;
+            }
+            &-btn {
+                margin: 1em 0;
+                padding: .5em 3em;
+                font-size: 1em;
+            }
+        }
+        .minus {
+            font-size: 0.7rem;
+        }
+    }
+}

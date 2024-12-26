@@ -1,0 +1,89 @@
+@use '../variables/variables' as *;
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $main-color;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.hero-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/jungle_desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    &__shadow {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.section-title {
+    margin: 1em 0;
+    font-weight: 300;
+    font-size: 2.5em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    &__title{
+        color: $main-color;
+        font-size: 2em;
+    }
+    img {
+        width: 2.5em;
+    }
+}
+
+.action-btn {
+    position: relative;
+    margin-top: 2em;
+    padding: 0.5em 3.5em;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.4);
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+.action-btn::before,
+.action-btn::after {
+    position: absolute;
+    content: '';
+    top: -100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $green;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.15, 0.77, 0.15, 0.77);
+}
+.action-btn::before {
+    opacity: 0.5;
+}
+.action-btn::after {
+    transition-delay: 0.2s;
+}
+
+.action-btn:hover::before,
+.action-btn:hover::after {
+    top: 0;
+}
+.action-btn:hover {
+    box-shadow: 0 4px 10px rgb(42, 222, 114, 0.4);
+}
