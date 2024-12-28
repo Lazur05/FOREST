@@ -209,10 +209,8 @@
 		}
 		&-textarea {
 			height: 10em;
-			min-width: 100%;
-			max-width: 100%;
 			min-height: 60px;
-			max-height: 300px;
+			resize: vertical;
 		}
 
 		&-input:focus,
