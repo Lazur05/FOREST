@@ -81,6 +81,9 @@
 }
 
 @media screen and (max-width: 992px) {
+    body {
+        overflow-x: hidden;
+    }
     .wrapper {
         max-width: 670px;
     }
