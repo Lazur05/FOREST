@@ -4,6 +4,10 @@ body {
     color: $main-color;
 }
 
+.nav-active {
+    overflow: hidden;
+}
+
 .wrapper {
     margin: 0 auto;
     max-width: 1400px;

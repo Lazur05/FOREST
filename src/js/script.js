@@ -6,9 +6,9 @@ const sections = document.querySelectorAll('.section');
 const footerYear = document.querySelector('.footer__year');
 
 
-
 const navOpen = () => {
     navMenu.classList.toggle('nav__links--active');
+    document.body.classList.toggle('nav-active');
     burgerBars.forEach(bar => {
         bar.classList.toggle('nav__burger-bar--active')
     })
@@ -16,6 +16,7 @@ const navOpen = () => {
 
 const navClose = () => {
     navMenu.classList.remove('nav__links--active');
+    document.body.classList.remove('nav-active');
     burgerBars.forEach(bar => {
         bar.classList.remove('nav__burger-bar--active');
     })
@@ -25,8 +26,6 @@ const handleScrollSpy = () => {
     const sectionId = [];
 
     sections.forEach(section => {
-        // console.log(window.scrollY);
-        // console.log(section.offsetHeight);
         
         if (window.scrollY <= (section.offsetTop + section.offsetHeight) - 100) {
             sectionId.push(section)
