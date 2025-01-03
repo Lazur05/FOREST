@@ -281,5 +281,9 @@
 	}
 	&__list {
 		margin: .5em 2em;
+		&-item {
+			margin: .5em 0;
+			line-height: 1.9em;
+		}
 	}
 }

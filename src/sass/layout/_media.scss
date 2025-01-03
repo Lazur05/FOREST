@@ -314,6 +314,9 @@
             }
         }
     }
+    .section-title {
+        font-size: 1.8rem;
+    }
     .home {
         &__title {
             font-size: 1.4em;
@@ -404,6 +407,11 @@
         }
         &__map {
             margin: 2em;
+        }
+    }
+    .privacy-policy {
+        &__box {
+            margin: 0 2em 4em;
         }
     }
 }
