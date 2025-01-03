@@ -132,29 +132,6 @@
 			font-size: 1.5rem;
 		}
 	}
-
-	&__link {
-		position: relative;
-		color: $main-color;
-		font-weight: bold;
-		transition: background-color 0.3s;
-	}
-	&__link::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		background-color: $green;
-		bottom: 0;
-		left: 0;
-		transition: height 0.3s;
-		z-index: -1;
-	}
-
-	&__link:hover::before,
-	&__link:focus::before {
-		height: 100%;
-	}
 }
 
 .contact {
@@ -244,6 +221,10 @@
 			border-color: $error;
 		}
 	}
+	.policy-info {
+		margin-top: 2em;
+		text-align: center;
+	}
 
 	&__popup {
 		position: fixed;
@@ -284,5 +265,21 @@
 		display: flex;
 		justify-content: center;
 		margin: 4em;
+	}
+}
+
+.privacy-policy {
+	&__box {
+		margin-bottom: 4em;
+	}
+	&__paragraph {
+		margin: 2em 0;
+	}
+	&__title {
+		font-size: 1.5rem;
+		margin-bottom: .5em;
+	}
+	&__list {
+		margin: .5em 2em;
 	}
 }
